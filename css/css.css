@@ -3,6 +3,10 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	/*	height: 100vh;*/
 	user-select: none;
@@ -78,7 +82,13 @@ body {
 }
 
 .title-text {
+	text-align: center;
+	color: white;
 	text-shadow: 0px 4px black;
+}
+
+.time-period {
+	margin-top: 30px;
 }
 
 .buttons {
@@ -114,5 +124,50 @@ body {
 
 a {
 	text-decoration: none;
+	color: white;
+}
+
+.content {
+	margin: 50px;
+	display: grid;
+	gap: 15px;
+	padding: 20px;
+
+	/* Default: 3 columns on larger screens */
+	grid-template-columns: repeat(2, 1fr);
+	/* Center items */
+	justify-content: center;
+	align-items: center;
+}
+
+/* Mobile: 1 column layout */
+@media (max-width: 768px) {
+	.content {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+/* Content Card Styling */
+.content-card {
+	display: flex;
+	background-color: rgb(190, 46, 10);
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+	height: 100px;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-title {
+	color: white;
+	text-shadow: 3px 3px rgb(163, 33, 0);
+	text-align: center;
+	font-size: 23px;
+}
+
+.about {
+	margin-top: 30px;
 	color: white;
 }
