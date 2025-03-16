@@ -4,10 +4,11 @@
 }
 
 body {
-/*	height: 100vh;*/
+	/*	height: 100vh;*/
+	user-select: none;
 }
 
-.background {
+.header {
 	height: 100vh;
 	width: auto;
 
@@ -18,14 +19,16 @@ body {
 .video video {
 	position: fixed;
 	z-index: -2;
-	top: 0; left: 0;
+	top: 0;
+	left: 0;
 	min-width: 100%;
 	min-height: 100%;
 }
 
 #cover {
 	position: fixed;
-	top: 0; left: 0;
+	top: 0;
+	left: 0;
 	height: 100%;
 	width: 100%;
 	z-index: -1;
@@ -37,7 +40,9 @@ body {
 @keyframes change-opacity {
 	0% {
 		background-color: rgba(0, 0, 0, 1);
-	} 100% {
+	}
+
+	100% {
 		background-color: rgba(0, 0, 0, .6);
 	}
 }
@@ -56,9 +61,13 @@ body {
 	0% {
 		top: -10%;
 		opacity: 0;
-	} 50% {
+	}
+
+	50% {
 		opacity: 0;
-	} 100% {
+	}
+
+	100% {
 		opacity: 1;
 		top: 0%;
 	}
@@ -66,4 +75,44 @@ body {
 
 .intro h1 {
 	font-size: 80px;
+}
+
+.title-text {
+	text-shadow: 0px 4px black;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.start-button,
+.about-button {
+	padding: 10px 20px;
+	width: auto;
+	min-width: 150px;
+	max-width: 200px;
+	text-align: center;
+	border: none;
+	background-color: rgb(190, 46, 10);
+	color: white;
+	cursor: pointer;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 2px solid rgb(163, 33, 0);
+	text-shadow: 2px 2px rgb(163, 33, 0);
+}
+
+.start-button:hover,
+.about-button:hover {
+	background-color: rgb(146, 36, 8);
+	border: 2px solid rgb(119, 25, 1);
+}
+
+a {
+	text-decoration: none;
+	color: white;
 }
