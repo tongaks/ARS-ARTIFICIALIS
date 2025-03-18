@@ -10,7 +10,7 @@ html {
 body {
 	/*	height: 100vh;*/
 	user-select: none;
-	background-image: url("/ARS-ARTIFICIALIS/images/featured-artworks/starry-night.gif");
+	background-image: url("../images/featured-artworks/starry-night.gif");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -92,6 +92,7 @@ body {
 }
 
 .time-period {
+	position: relative;
 	margin-top: 30px;
 }
 
@@ -124,6 +125,18 @@ body {
 .about-button:hover {
 	background-color: rgb(146, 36, 8);
 	border: 2px solid rgb(119, 25, 1);
+}
+
+.back-to-top {
+	position: sticky;
+	top: 100vh; left: 95vw;
+
+	width: fit-content;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: white;
+	user-select: none;
+	cursor: pointer;
 }
 
 a {
@@ -171,8 +184,8 @@ a {
 	font-size: 23px;
 }
 
-.about {
+/*.about {
 	margin-top: 30px;
 	color: white;
-}
+}*/
 
