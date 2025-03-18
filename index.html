@@ -7,8 +7,46 @@
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 	<title>Ars Artificialis</title>
 </head>
+<style>
+	ul {
+		position: sticky;
+		top: 0;
+		overflow: hidden;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	li {
+		float: right;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	li a:hover {
+		background-color: #111;
+	}
+
+	.about {
+		height: 2000px;
+	}
+</style>
 
 <body>
+	<div class="navbar">
+		<ul>
+			<li><a href="#timePeriod">Time Period</a></li>
+			<li><a href="#about">About</a></li>
+		</ul>
+	</div>
 	<!--header-->
 	<div class="header">
 		<div id="cover"></div>
@@ -20,17 +58,16 @@
 			</div>
 			<div class="buttons">
 				<a href="#timePeriod"><button class="start-button">Start</button></a>
-				<a href="#timePeriod"><button class="about-button">About</button></a>
 			</div>
 		</div>
 	</div>
 	<!--time period-->
-	<div class="time-period">
+	<div class="time-period" id="timePeriod">
 		<div class="title-text">
 			<h1>Select a Time Period</h>
 		</div>
 		<div class="content" id="timePeriod">
-			<a href="#">
+			<a href="ancientArt.html">
 				<div class="content-card">
 					<h1 class="card-title">Ancient Art</h1>
 				</div>
@@ -53,7 +90,7 @@
 		</div>
 	</div>
 	<!---->
-	<div class="about">
+	<div class="about" id="about">
 
 	</div>
 
