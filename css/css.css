@@ -111,6 +111,10 @@ body {
 	width: 100%;
 }
 
+.button-text {
+	color: rgb(19, 23, 41);
+}
+
 .start-button {
 	padding: 10px;
 	width: 20%;
