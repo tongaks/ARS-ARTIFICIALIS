@@ -27,13 +27,15 @@
 		width: 100vw; height: 100vh;
 		background: red;
 
-		animation: uncover 1s ease forwards 1s;
+		animation: uncover-left 1s ease forwards 1s, uncover-top 1s ease forwards 2s;
 	}
 
-	@keyframes uncover {
-		100% {
-			width: 0; height: 0;
-		}
+	@keyframes uncover-left {
+		100% { width: 5%; }
+	}
+
+	@keyframes uncover-top {
+		100% { height: 0; }
 	}
 
 	h1 {
