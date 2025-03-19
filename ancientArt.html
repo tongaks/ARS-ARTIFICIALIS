@@ -65,19 +65,49 @@
 </style>
 
 <body>
+
     <div class="navbar">
         <ul>
             <li><a class="active" href="index.html">Home</a></li>
         </ul>
     </div>
-    <div class="paintings-container">
-        <div><img src="./images/featured-artworks/artwork-1.jpg" alt="" class="painting"></div>
-        <div><img src="./images/featured-artworks/artwork-2.jpg" alt="" class="painting"></div>
-        <div><img src="./images/featured-artworks/artwork-3.jpg" alt="" class="painting"></div>
-        <div><img src="./images/featured-artworks/starry-night.gif" alt="" class="painting"></div>
+
+    <div class="paintings-container" id="paintingsContainer">
+        <!-- Paintings will be inserted here dynamically -->
     </div>
-    </div>
-    </div>
+
+    <script>
+        // Data for paintings
+        const paintingsData = [
+            { src: "./images/featured-artworks/artwork-1.jpg", title: "Artwork 1" },
+            { src: "./images/featured-artworks/artwork-2.jpg", title: "Artwork 2" },
+            { src: "./images/featured-artworks/artwork-3.jpg", title: "Artwork 3" },
+            { src: "./images/featured-artworks/starry-night.gif", title: "Starry Night" },
+            { src: "./images/featured-artworks/temp.jpg", title: "Starry Night" },
+            { src: "./images/featured-artworks/vangogh.webp", title: "Starry Night" },
+        ];
+
+        // Function to render paintings dynamically
+        function renderPaintings() {
+            const container = document.getElementById("paintingsContainer");
+            container.innerHTML = ""; // Clear container
+
+            paintingsData.forEach(painting => {
+                const div = document.createElement("div");
+                const img = document.createElement("img");
+                img.src = painting.src;
+                img.alt = painting.title;
+                img.classList.add("painting");
+
+                div.appendChild(img);
+                container.appendChild(div);
+            });
+        }
+
+        // Call function to render paintings
+        renderPaintings();
+    </script>
+
 </body>
 
 </html>
