@@ -12,75 +12,65 @@
 </style>
 
 <body>
+	<div id="cover"></div>
+
 	<div class="navbar">
-		<ul>
-			<a href="#timePeriod">Time Period</a>
-			<a href="#about">About</a>
-		</ul>
-	</div>
-	<!--header-->
-	<div class="header">
-		<div id="cover"></div>
+		<h2>Ars Artificialis</h2>
 
-		<div class="intro">
-			<div class="title-text">
-				<h2>Welcome to</h2>
-				<h1>Ars Artificialis</h1>
+		<div class="control-links">
+			<a href="#time-periods">Time Period</a>
+			<a href="#time-periods">About</a>			
+		</div>
+	</div>
+
+
+	<div class="intro">
+		<h2>Welcome to</h2>
+		<h1>Ars Artificialis</h1>
+		<div class="button" onclick="Link('#time-periods')">Start</div>
+	</div>
+
+
+
+	<div class="timeline" id="time-periods">
+		<h1>Select a Time Period</h>
+
+		<div class="time-periods">
+			<div class="card" onclick="Link('ancient-art/ancient-art.html')">
+				<img src="images/time-period-img/ancient-art.jpg">
+				<h1>Ancient Art</h1>
 			</div>
-			<div class="buttons">
-				<a href="#timePeriod"><button class="start-button">
-						<h3 class="button-text">Start</h3>
-					</button></a>
+
+			<div class="card" onclick="Link('medieval-art/medieval-art.html')">
+				<img src="images/time-period-img/medieval.webp">
+				<h1>Medieval Art</h1>
+			</div>
+
+			<div class="card" onclick="Link('renaissance-art/renaissance-art.html')">
+				<img src="images/time-period-img/renaissance.jpg">
+				<h1>Renaissance Art</h1>
+			</div>
+
+			<div class="card" onclick="Link('baroque-rococo-art/baroque-rococo-art.html')">
+				<img src="images/time-period-img/baroque.jpg">
+				<h1>Baroque & Rococo Art</h1>
 			</div>
 		</div>
+
+		<div class="button" onclick="Link('index.html')">See more</div>
 	</div>
 
-	<div class="time-period" id="timePeriod">
-		<a href="#">
-			<div class="back-to-top">Back to Top</div>
-		</a>
 
-		<div class="title-text">
-			<h1>Select a Time Period</h>
-		</div>
-
-		<div class="content" id="timePeriod">
-
-			<a href="ancientArt.html">
-				<div class="content-card">
-					<img src="images/ancient-art.jpg">
-					<h1>Ancient Art</h1>
-				</div>
-			</a>
-
-			<a href="medievalArt.html">
-				<div class="content-card">
-					<img src="images/Christ-Rescuing-Peter.webp">
-					<h1>Medieval Art</h1>
-				</div>
-			</a>
-
-			<a href="renaissanceArt.html">
-				<div class="content-card">
-					<img src="images/renaissance.jpg">
-					<h1>Renaissance Art</h1>
-				</div>
-			</a>
-
-			<a href="baroqueRococoArt.html">
-				<div class="content-card">
-					<img src="images/baroque.jpg">
-					<h1>Baroque & Rococo Art</h1>
-				</div>
-			</a>
-
-		</div>
-	</div>
-	<div class="about" id="about">
-
+	<div class="about-us">
+		<div class="button" id="back" onclick="Link('#')">Back</div>
+		Amogus
 	</div>
 
 
 </body>
-
+<script type="text/javascript">
+	function Link(path) {
+		window.location.href = path;
+	}
+</script>
 </html>
