@@ -26,12 +26,13 @@ body {
 
 
 
+
 /*		navbar start	*/
 .navbar {
 	padding: 10px;
-	width: 95vw;
-	color: white;
-	background-color: transparent;
+	width: 100%;
+	color: black;
+	background-color: ghostwhite;
 
 	display: flex;
 	position: absolute;
@@ -41,15 +42,16 @@ body {
 
 .navbar .control-links {
 	display: flex;
+	align-items: center;
 }
 
 .control-links a { 
 	margin: 1px 10px;
-	font-weight: 500;
-	color: white;
+	font-weight: 600;
+	color: black;
 }
 
-.control-links a:hover { border-bottom: 1px solid white; }
+.control-links a:hover { border-bottom: 1px solid black; }
 /*		navbar end		*/
 
 
@@ -114,6 +116,16 @@ body {
 	background-color: lightgray;
 	transform: translateY(-5px);
 }
+
+#see-more {
+	color: white;
+	background-color: seagreen;
+}
+
+#see-more:hover {
+	color: black;
+	background-color: lightgreen;
+}
 /*		button end 	*/
 
 
@@ -122,12 +134,13 @@ body {
 .timeline {
 	position: relative;
 	height: 80vh;
-	color: white;
+	color: black;
 
 	justify-content: center;
 	align-content: center;
 	text-align: center;
-	background-color: rgba(0, 0, 0, .6);
+/*	background-color: rgba(0, 0, 0, .6);*/
+	background-color: ghostwhite;
 }
 
 .time-periods {
@@ -193,7 +206,7 @@ body {
 	padding: 20px;
 	height: auto;
 	position: relative;
-	background-color: beige;
+	background-color: lightgray;
 }
 
 .card-container {
