@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,62 +9,71 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <h2 class="navbar-title">PREHISTORY <div style="font-size: 8px;text-align: center;">ART</div>
+        </h2>
 
-<div class="paintings-container">
-
-    <div id="artwork-1" class="painting">
-        <div id="cover"></div>
-
-        <img src="../images/featured-artworks/artwork-2.jpg">
-
-        <div class="description">
-            <h1>Painting 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
-            <div class="next-button" onclick="Next('#artwork-2')">Next</div>
-            <div class="next-button" onclick="Next('#artwork-1')">Back</div>
+        <div class="control-links">
+            <a href="../index.html#time-periods">Time Period</a>
+            <a href="../index.html#about-us">About</a>
         </div>
     </div>
+    <div class="paintings-container">
 
-    <div id="artwork-2" class="painting">
-        <div id="cover"></div>
+        <div id="artwork-1" class="painting">
+            <div id="cover"></div>
 
-        <img src="../images/featured-artworks/artwork-1.jpg">
+            <img src="../images/featured-artworks/artwork-2.jpg">
 
-        <div class="description">
-            <h1>Painting 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
-            <div class="next-button" onclick="Next('#artwork-3')">Next</div>
-            <div class="next-button" onclick="Next('#artwork-1')">Back</div>
+            <div class="description">
+                <h1>Painting 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                <div class="next-button" onclick="Next('#artwork-2')">Next</div>
+                <div class="next-button" onclick="Next('#artwork-1')">Back</div>
+            </div>
         </div>
-    </div>
 
-    <div id="artwork-3" class="painting">
-        <div id="cover"></div>
+        <div id="artwork-2" class="painting">
+            <div id="cover"></div>
 
-        <img src="../images/featured-artworks/artwork-3.jpg">
+            <img src="../images/featured-artworks/artwork-1.jpg">
 
-        <div class="description">
-            <h1>Painting 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
-            <div class="next-button" onclick="Next('#artwork-4')">Next</div>
-            <div class="next-button" onclick="Next('#artwork-2')">Back</div>
+            <div class="description">
+                <h1>Painting 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                <div class="next-button" onclick="Next('#artwork-3')">Next</div>
+                <div class="next-button" onclick="Next('#artwork-1')">Back</div>
+            </div>
         </div>
-    </div>
 
-    
-</div>
+        <div id="artwork-3" class="painting">
+            <div id="cover"></div>
+
+            <img src="../images/featured-artworks/artwork-3.jpg">
+
+            <div class="description">
+                <h1>Painting 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                <div class="next-button" onclick="Next('#artwork-4')">Next</div>
+                <div class="next-button" onclick="Next('#artwork-2')">Back</div>
+            </div>
+        </div>
+
+
+    </div>
 
 </body>
 <script type="text/javascript">
     function Next(path) { window.location.href = path; }
 </script>
+
 </html>

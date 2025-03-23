@@ -3,25 +3,30 @@
     margin: 0;
 }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
-body { 
+body {
     position: relative;
     z-index: -9999;
 }
 
 #cover {
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
 
-    width: 100%; height: 100vh;
+    width: 100%;
+    height: 100vh;
     z-index: -1;
     backdrop-filter: blur(9px);
     background-color: rgba(0, 0, 0, .4);
 }
 
 .paintings-container {
-    width: auto; height: 100vh;
+    width: auto;
+    height: 100vh;
     position: relative;
     z-index: -1;
 }
@@ -37,8 +42,8 @@ body {
     align-items: center;
 }
 
-.painting img { 
-    display: block; 
+.painting img {
+    display: block;
     box-shadow: -2px 2px 15px 6px rgba(0, 0, 0, .6);
     border: 20px ridge gold;
     width: 800px;
@@ -68,7 +73,7 @@ body {
 
 #artwork-2 {
     background-image: url("../images/featured-artworks/artwork-1.jpg");
-} 
+}
 
 #artwork-3 {
     background-image: url("../images/featured-artworks/artwork-3.jpg");
@@ -96,9 +101,46 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-    .painting img { width: 600px; }
+    .painting img {
+        width: 600px;
+    }
 }
 
 @media screen and (max-width: 700px) {
-    .painting img { width: 400px; }
+    .painting img {
+        width: 400px;
+    }
 }
+
+/*		navbar start	*/
+.navbar {
+    padding: 10px;
+    width: 97.2vw;
+    color: black;
+    background-color: ghostwhite;
+
+    display: flex;
+    position: absolute;
+    justify-content: space-evenly;
+    z-index: 1;
+}
+
+.navbar .control-links {
+    display: flex;
+    align-items: center;
+}
+
+.control-links a {
+    margin: 1px 10px;
+    font-weight: 600;
+    color: black;
+}
+
+.control-links a:hover {
+    border-bottom: 1px solid black;
+}
+ .navbar-title {
+     font-size: 20px;
+ }
+
+/*		navbar end		*/

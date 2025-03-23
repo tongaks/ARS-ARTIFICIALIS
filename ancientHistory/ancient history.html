@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,23 +13,30 @@
         margin: 0;
     }
 
-    body { 
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
         position: relative;
         z-index: -9999;
     }
 
     #cover {
         position: absolute;
-        top: 0; left: 0;
+        top: 0;
+        left: 0;
 
-        width: 100%; height: 100vh;
+        width: 100%;
+        height: 100vh;
         z-index: -1;
         backdrop-filter: blur(9px);
         background-color: rgba(0, 0, 0, .4);
     }
 
     .paintings-container {
-        width: auto; height: 100vh;
+        width: auto;
+        height: 100vh;
         position: relative;
         z-index: -1;
     }
@@ -44,8 +52,8 @@
         align-items: center;
     }
 
-    .painting img { 
-        display: block; 
+    .painting img {
+        display: block;
         box-shadow: -2px 2px 15px 6px rgba(0, 0, 0, .6);
         border: 20px ridge gold;
         width: 800px;
@@ -56,6 +64,7 @@
         margin: auto 50px;
         padding: 30px;
         background-color: beige;
+        text-align: justify;
     }
 
     .next-button {
@@ -74,67 +83,143 @@
 
     #artwork-2 {
         background-image: url("../images/featured-artworks/artwork-1.jpg");
-    } 
+    }
 
     #artwork-3 {
         background-image: url("../images/featured-artworks/artwork-3.jpg");
     }
+
+    @media screen and (max-width: 1300px) {
+        .paintings-container {
+            flex-direction: column;
+        }
+
+        .painting {
+            flex-direction: column;
+            align-content: center;
+            justify-content: space-evenly;
+        }
+
+        .description {
+            margin: auto;
+            width: auto;
+        }
+
+        .painting img {
+            width: 800px;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .painting img {
+            width: 600px;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .painting img {
+            width: 400px;
+        }
+    }
+
+    /*		navbar start	*/
+    .navbar {
+        padding: 10px;
+        width: 97.2vw;
+        color: black;
+        background-color: ghostwhite;
+
+        display: flex;
+        position: fixed;
+        justify-content: space-evenly;
+        z-index: 1;
+    }
+
+    .navbar .control-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .control-links a {
+        margin: 1px 10px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .control-links a:hover {
+        border-bottom: 1px solid black;
+    }
+
+    .navbar-title {
+        font-size: 20px;
+    }
+
+    /*		navbar end		*/
 </style>
 
 <body>
+    <div class="navbar">
+        <h2 class="navbar-title">ANCIENT HISTORY <div style="font-size: 8px;text-align: center;">ART</div>
+        </h2>
 
-<div class="paintings-container">
-
-    <div id="artwork-1" class="painting">
-        <div id="cover"></div>
-
-        <img src="../images/featured-artworks/artwork-2.jpg">
-
-        <div class="description">
-            <h1>Painting 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
-            <div class="next-button" onclick="Next('#artwork-2')">Next</div>
+        <div class="control-links">
+            <a href="../index.html#time-periods">Time Period</a>
+            <a href="../index.html#about-us">About</a>
         </div>
     </div>
+    <div class="paintings-container">
 
-    <div id="artwork-2" class="painting">
-        <div id="cover"></div>
+        <div id="artwork-1" class="painting">
+            <div id="cover"></div>
 
-        <img src="../images/featured-artworks/artwork-1.jpg">
+            <img src="../images/featured-artworks/artwork-2.jpg">
 
-        <div class="description">
-            <h1>Painting 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
-            <div class="next-button" onclick="Next('#artwork-3')">Next</div>
+            <div class="description">
+                <h1>Painting 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                <div class="next-button" onclick="Next('#artwork-2')">Next</div>
+            </div>
         </div>
-    </div>
 
-    <div id="artwork-3" class="painting">
-        <div id="cover"></div>
+        <div id="artwork-2" class="painting">
+            <div id="cover"></div>
 
-        <img src="../images/featured-artworks/artwork-3.jpg">
+            <img src="../images/featured-artworks/artwork-1.jpg">
 
-        <div class="description">
-            <h1>Painting 1</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
-            <div class="next-button" onclick="Next('#artwork-4')">Next</div>
+            <div class="description">
+                <h1>Painting 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                <div class="next-button" onclick="Next('#artwork-3')">Next</div>
+            </div>
         </div>
-    </div>
 
-    
-</div>
+        <div id="artwork-3" class="painting">
+            <div id="cover"></div>
+
+            <img src="../images/featured-artworks/artwork-3.jpg">
+
+            <div class="description">
+                <h1>Painting 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                <div class="next-button" onclick="Next('#artwork-4')">Next</div>
+            </div>
+        </div>
+
+
+    </div>
 
 </body>
 <script type="text/javascript">
     function Next(path) { window.location.href = path; }
 </script>
+
 </html>
