@@ -1,5 +1,5 @@
-## Welcome to ARS ARTIFICIALIS
-# Developed by:
+# Welcome to 🎨ARS ARTIFICIALIS🎨
+## Developed by:
 - Denina, Mark Shelo
 - Quintela, Wion
 - Villareal, Jamin
