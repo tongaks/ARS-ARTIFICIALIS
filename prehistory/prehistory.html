@@ -4,74 +4,277 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="ancient.css">
-    <title>Ancient Arts</title>
+    <title>PreHistory Arts</title>
 </head>
+
+<style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        position: relative;
+        z-index: -9999;
+    }
+
+    #cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        backdrop-filter: blur(9px);
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .paintings-container {
+        width: auto;
+        height: 100vh;
+        position: relative;
+        z-index: -1;
+    }
+
+    .painting {
+        position: relative;
+        height: 100vh;
+        z-index: -2;
+        padding: 1px 50px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .painting img {
+        display: block;
+        box-shadow: -2px 2px 15px 6px rgba(0, 0, 0, .6);
+        border: 20px ridge gold;
+        width: 800px;
+    }
+
+    .description {
+        width: 100%;
+        margin: auto 50px;
+        padding: 30px;
+        background-color: beige;
+        text-align: justify;
+    }
+
+    .next-button {
+        user-select: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin: 10px 0px 0px 0px;
+        color: white;
+        width: fit-content;
+        background-color: limegreen;
+    }
+
+    p {
+        color: rgb(37, 37, 37);
+    }
+
+    @media screen and (max-width: 1300px) {
+        .paintings-container {
+            flex-direction: column;
+        }
+
+        .painting {
+            flex-direction: column;
+            align-content: center;
+            justify-content: space-evenly;
+        }
+
+        .description {
+            margin: auto;
+            width: auto;
+        }
+
+        .painting img {
+            width: 800px;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .painting img {
+            width: 600px;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .painting img {
+            width: 400px;
+        }
+    }
+
+    /*		navbar start	*/
+    .navbar {
+        padding: 10px;
+        width: 97.2vw;
+        color: black;
+        background-color: ghostwhite;
+
+        display: flex;
+        position: absolute;
+        justify-content: space-evenly;
+        z-index: 1;
+    }
+
+    .navbar .control-links {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        max-width: 500px;
+    }
+
+    li {
+        font-size: 20px;
+        margin: 0;
+        /* Remove default margin */
+        padding-left: 0;
+        /* Align with h1 */
+        list-style-position: inside;
+        /* Align bullet with text */
+        list-style-type: symbols(fixed "★");
+    }
+
+    .control-links a {
+        margin: 1px 10px;
+        font-weight: 600;
+        color: black;
+    }
+
+    .control-links a:hover {
+        border-bottom: 1px solid black;
+    }
+
+    .navbar-title {
+        font-size: 20px;
+    }
+
+    /*		navbar end		*/
+</style>
 
 <body>
     <div class="navbar">
         <h2 class="navbar-title">PREHISTORY <div style="font-size: 8px;text-align: center;">ART</div>
         </h2>
-
         <div class="control-links">
             <a href="../index.html#time-periods">Time Period</a>
             <a href="../index.html#about-us">About</a>
         </div>
     </div>
-    <div class="paintings-container">
 
-        <div id="artwork-1" class="painting">
-            <div id="cover"></div>
+    <div class="paintings-container" id="paintingsContainer"></div>
 
-            <img src="../images/featured-artworks/artwork-2.jpg">
+    <script>
+        // Array of artworks using the same image for background and main display
+        const artworks = [
+            {
+                id: "artwork-1",
+                title: "The Cave of Altamira Bison",
+                location: "Altamira Cave, Spain",
+                description: "The Altamira cave paintings are among the first discovered and recognized as prehistoric art. The ceiling features detailed, polychrome bison painted with red, black, and yellow pigments.",
+                imgSrc: "../images/preHistory/Altamira-Bison-By-Rameessos-1024x831.jpg",
+                nextId: "#artwork-2"
+            },
+            {
+                id: "artwork-2",
+                title: "Hall of The Bulls",
+                location: "Lascaux Cave, France",
+                description: "One of the most famous prehistoric paintings, this grand composition features large bulls, horses, and deer, some measuring up to 5 meters. The overlapping images suggest movement and an attempt at perspective.",
+                imgSrc: "../images/preHistory/hallofthebulls.jpg",
+                nextId: "#artwork-3"
+            },
+            {
+                id: "artwork-3",
+                title: "Lions in Motion",
+                location: "Chauvet Cave, France",
+                description: "This panel shows a group of lions in various stages of movement, possibly hunting. The shading and detail indicate a deep understanding of animal behavior. Chauvet’s paintings are some of the oldest known, yet they exhibit advanced artistic techniques.",
+                imgSrc: "../images/preHistory/lions.jpg",
+                nextId: "#artwork-4"
+            },
+            {
+                id: "artwork-4",
+                title: "Spotted Horses and Hands",
+                location: "Pech Merle Cave, France",
+                description: "This artwork features horses covered in black spots and surrounded by hand stencils. Some researchers believe the spots represent real horse markings, showing early observation skills. Others suggest a symbolic or spiritual meaning.",
+                imgSrc: "../images/preHistory/horseandhands.webp",
+                nextId: "#artwork-5"
+            },
+            {
+                id: "artwork-5",
+                title: "The Great Gallery",
+                location: "Utah, USA",
+                description: "This artwork features horses covered in black spots and surrounded by hand stencils. Some researchers believe the spots represent real horse markings, showing early observation skills. Others suggest a symbolic or spiritual meaning.",
+                imgSrc: "../images/preHistory/greatgallery.webp",
+                nextId: "#artwork-6"
+            },
+            {
+                id: "artwork-6",
+                title: "Magura Cave Paintings",
+                location: "Vidin Province, Bulgaria",
+                description: "This artwork features horses covered in black spots and surrounded by hand stencils. Some researchers believe the spots represent real horse markings, showing early observation skills. Others suggest a symbolic or spiritual meaning.",
+                imgSrc: "../images/preHistory/magura.jpg",
+                nextId: "#artwork-7"
+            },
+            {
+                id: "artwork-7",
+                title: "Bhimbetka Rock Shelters",
+                location: "Madhya Pradesh, India",
+                description: "Contains hunting scenes, dancing figures, and animals, dating back 30,000 BCE. Art style evolved over thousands of years. Showcases early human life and beliefs.",
+                imgSrc: "../images/preHistory/bhimbetka.jpg",
+                nextId: "#artwork-8"
+            }, {
+                id: "artwork-7",
+                title: " Kapova Cave Paintings",
+                location: "Bashkortostan, Russia",
+                description: "Features red ochre images of mammoths and horses, created ~16,000 BCE. Located in a hard-to-reach limestone cavern. Likely had ceremonial or mythological importance.",
+                imgSrc: "../images/preHistory/kapova.jpg",
+                nextId: "#artwork-8"
+            },
+        ];
 
-            <div class="description">
-                <h1>Painting 1</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-                <div class="next-button" onclick="Next('#artwork-2')">Next</div>
-                <div class="next-button" onclick="Next('#artwork-1')">Back</div>
-            </div>
-        </div>
+        // Function to generate paintings dynamically
+        function generatePaintings() {
+            const container = document.getElementById("paintingsContainer");
 
-        <div id="artwork-2" class="painting">
-            <div id="cover"></div>
+            artworks.forEach((artwork) => {
+                container.innerHTML += `
+                    <div id="${artwork.id}" class="painting" style="background-image: url('${artwork.imgSrc}'); background-size: cover; background-position: center;">
+                        <div id="cover"></div>
+                        <img src="${artwork.imgSrc}">
+                        <div class="description">
+                            <h1>${artwork.title}</h1>
+                            <ul><li>${artwork.location}</li></ul>
+                            <p>${artwork.description}</p>
+                            <div class="next-button" onclick="Next('${artwork.nextId}')">Next</div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
 
-            <img src="../images/featured-artworks/artwork-1.jpg">
+        function Next(path) {
+            window.location.href = path;
+        }
 
-            <div class="description">
-                <h1>Painting 1</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-                <div class="next-button" onclick="Next('#artwork-3')">Next</div>
-                <div class="next-button" onclick="Next('#artwork-1')">Back</div>
-            </div>
-        </div>
-
-        <div id="artwork-3" class="painting">
-            <div id="cover"></div>
-
-            <img src="../images/featured-artworks/artwork-3.jpg">
-
-            <div class="description">
-                <h1>Painting 1</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-                <div class="next-button" onclick="Next('#artwork-4')">Next</div>
-                <div class="next-button" onclick="Next('#artwork-2')">Back</div>
-            </div>
-        </div>
-
-
-    </div>
-
+        // Call function to generate paintings
+        generatePaintings();
+    </script>
 </body>
+
+
+
 <script type="text/javascript">
     function Next(path) { window.location.href = path; }
 </script>
