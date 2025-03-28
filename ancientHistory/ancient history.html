@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ancient Arts</title>
+    <title>Ancient History Arts</title>
 </head>
 
 <style type="text/css">
@@ -77,16 +77,8 @@
         background-color: limegreen;
     }
 
-    #artwork-1 {
-        background-image: url("../images/featured-artworks/artwork-2.jpg");
-    }
-
-    #artwork-2 {
-        background-image: url("../images/featured-artworks/artwork-1.jpg");
-    }
-
-    #artwork-3 {
-        background-image: url("../images/featured-artworks/artwork-3.jpg");
+    p {
+        color: rgb(37, 37, 37);
     }
 
     @media screen and (max-width: 1300px) {
@@ -130,7 +122,7 @@
         background-color: ghostwhite;
 
         display: flex;
-        position: fixed;
+        position: absolute;
         justify-content: space-evenly;
         z-index: 1;
     }
@@ -138,6 +130,21 @@
     .navbar .control-links {
         display: flex;
         align-items: center;
+    }
+
+    img {
+        max-width: 500px;
+    }
+
+    li {
+        font-size: 20px;
+        margin: 0;
+        /* Remove default margin */
+        padding-left: 0;
+        /* Align with h1 */
+        list-style-position: inside;
+        /* Align bullet with text */
+        list-style-type: symbols(fixed "★");
     }
 
     .control-links a {
@@ -161,63 +168,58 @@
     <div class="navbar">
         <h2 class="navbar-title">ANCIENT HISTORY <div style="font-size: 8px;text-align: center;">ART</div>
         </h2>
-
         <div class="control-links">
             <a href="../index.html#time-periods">Time Period</a>
             <a href="../index.html#about-us">About</a>
         </div>
     </div>
-    <div class="paintings-container">
 
-        <div id="artwork-1" class="painting">
-            <div id="cover"></div>
+    <div class="paintings-container" id="paintingsContainer"></div>
 
-            <img src="../images/featured-artworks/artwork-2.jpg">
+    <script>
+        // Array of artworks using the same image for background and main display
+        const artworks = [
+            {
+                id: "artwork-1",
+                title: "The Cave of Altamira Bison",
+                location: "Altamira Cave, Spain",
+                description: "The Altamira cave paintings are among the first discovered and recognized as prehistoric art. The ceiling features detailed, polychrome bison painted with red, black, and yellow pigments.",
+                imgSrc: "../images/preHistory/Altamira-Bison-By-Rameessos-1024x831.jpg",
+                nextId: "#artwork-2"
+            },
+        ];
 
-            <div class="description">
-                <h1>Painting 1</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-                <div class="next-button" onclick="Next('#artwork-2')">Next</div>
-            </div>
-        </div>
+        // Function to generate paintings dynamically
+        function generatePaintings() {
+            const container = document.getElementById("paintingsContainer");
 
-        <div id="artwork-2" class="painting">
-            <div id="cover"></div>
+            artworks.forEach((artwork) => {
+                container.innerHTML += `
+                    <div id="${artwork.id}" class="painting" style="background-image: url('${artwork.imgSrc}'); background-size: cover; background-position: center;">
+                        <div id="cover"></div>
+                        <img src="${artwork.imgSrc}">
+                        <div class="description">
+                            <h1>${artwork.title}</h1>
+                            <ul><li>${artwork.location}</li></ul>
+                            <p>${artwork.description}</p>
+                            <div class="next-button" onclick="Next('${artwork.nextId}')">Next</div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
 
-            <img src="../images/featured-artworks/artwork-1.jpg">
+        function Next(path) {
+            window.location.href = path;
+        }
 
-            <div class="description">
-                <h1>Painting 1</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-                <div class="next-button" onclick="Next('#artwork-3')">Next</div>
-            </div>
-        </div>
-
-        <div id="artwork-3" class="painting">
-            <div id="cover"></div>
-
-            <img src="../images/featured-artworks/artwork-3.jpg">
-
-            <div class="description">
-                <h1>Painting 1</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.</p>
-                <div class="next-button" onclick="Next('#artwork-4')">Next</div>
-            </div>
-        </div>
-
-
-    </div>
-
+        // Call function to generate paintings
+        generatePaintings();
+    </script>
 </body>
+
+
+
 <script type="text/javascript">
     function Next(path) { window.location.href = path; }
 </script>
