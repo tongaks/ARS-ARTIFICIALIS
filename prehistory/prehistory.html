@@ -52,12 +52,12 @@
         align-items: center;
     }
 
-    .painting img {
+    /* .painting img {
         display: block;
         box-shadow: -2px 2px 15px 6px rgba(0, 0, 0, .6);
         border: 20px ridge gold;
         width: 800px;
-    }
+    } */
 
     .description {
         width: 100%;
@@ -68,13 +68,44 @@
     }
 
     .next-button {
+    user-select: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px 0px 0px 0px;
+    color: white;
+    width: fit-content;
+    background-color: #111;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Hover Effect */
+.next-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* Click Effect */
+.next-button:active {
+    transform: scale(0.95);
+}
+
+.next-button {
+    animation: softPulse 2s infinite ease-in-out;
+}
+  .next-button {
         user-select: none;
         cursor: pointer;
         padding: 10px 20px;
         margin: 10px 0px 0px 0px;
         color: white;
         width: fit-content;
-        background-color: limegreen;
+        background-color: #111;
+        animation: softPulse 2s infinite ease-in-out;
+    }
+
+    .next-button:hover {
+        background-color: #333;
     }
 
     p {
@@ -137,27 +168,41 @@
     }
 
     li {
-        font-size: 20px;
+        list-style-type: none;
+         font-size: 30px; /*
         margin: 0;
-        /* Remove default margin */
+     
         padding-left: 0;
-        /* Align with h1 */
+       
         list-style-position: inside;
-        /* Align bullet with text */
-        list-style-type: symbols(fixed "★");
+        
+        list-style-type: symbols(fixed "★"); */
     }
 
     .control-links a {
         margin: 1px 10px;
         font-weight: 600;
         color: black;
+        text-decoration: none;
     }
 
     .control-links a:hover {
         border-bottom: 1px solid black;
+        text-decoration: none;
     }
 
     .navbar-title {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-family: serif;
+        font-size: 50px;
+    }
+    li, p {
+        font-family: sans-serif;
+    }
+    p {
         font-size: 20px;
     }
 
@@ -235,12 +280,12 @@
                 imgSrc: "../images/preHistory/bhimbetka.jpg",
                 nextId: "#artwork-8"
             }, {
-                id: "artwork-7",
+                id: "artwork-8",
                 title: " Kapova Cave Paintings",
                 location: "Bashkortostan, Russia",
                 description: "Features red ochre images of mammoths and horses, created ~16,000 BCE. Located in a hard-to-reach limestone cavern. Likely had ceremonial or mythological importance.",
                 imgSrc: "../images/preHistory/kapova.jpg",
-                nextId: "#artwork-8"
+                nextId: "#"
             },
         ];
 
@@ -255,9 +300,12 @@
                         <img src="${artwork.imgSrc}">
                         <div class="description">
                             <h1>${artwork.title}</h1>
-                            <ul><li>${artwork.location}</li></ul>
-                            <p>${artwork.description}</p>
+                            <br/> 
+                            <ul ><li>${artwork.location}</li></ul><br/> <hr />
+                            <br/>
+                            <p style="padding-bottom:20px;">${artwork.description}</p> <br/>
                             <div class="next-button" onclick="Next('${artwork.nextId}')">Next</div>
+                            <br/>
                         </div>
                     </div>
                 `;
