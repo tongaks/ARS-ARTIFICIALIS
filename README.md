@@ -4,7 +4,3 @@
 - Quintela, Wion
 - Villareal, Jamin
 - Zantua, Andrei
-
-
-
-wwwww
