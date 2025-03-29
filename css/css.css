@@ -3,7 +3,6 @@
 	margin: 0;
 	text-decoration: none;
 	user-select: none;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -35,7 +34,7 @@ body {
 /*		navbar start	*/
 .navbar {
 	padding: 10px;
-	width: 97.2vw;
+	width: 100vw;
 	color: black;
 	background-color: beige;
 
@@ -230,7 +229,7 @@ body {
 .about-us {
 
 	text-align: center;
-	padding: 20px;
+	padding: 0px;
 	height: auto;
 	position: relative;
 	/* background-color: lightgray; */
@@ -250,9 +249,23 @@ body {
 	justify-content: center;
 	align-items: center;
 	font-size: 11px;
-	text-shadow: 2px 2px black;
+	color: black;
+/*	text-shadow: 2px 2px darkgrey;*/
 	margin-top: 20px;
 	gap: 10px;
+	background-color: beige;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+
+.card-container-a {
+	width: 33%;
+/*	border: solid black 5px;*/
+	background-color: beige;
+	padding-left: 50px;
+	padding-right: 50px;
+
 }
 
 .name-card {
