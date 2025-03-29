@@ -1,5 +1,6 @@
 # Welcome to 🎨ARS ARTIFICIALIS🎨
-## Developed by:
+A Web System Project
+Developed by:
 - Denina, Mark Shelo
 - Quintela, Wion
 - Villareal, Jamin
