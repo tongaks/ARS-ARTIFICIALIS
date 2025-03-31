@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Post-Classical Arts</title>
 </head>
 
@@ -152,7 +153,7 @@
         width: 97.2vw;
         color: black;
         background-color: beige;
-
+        border: 2px solid rgb(31, 18, 0);
         display: flex;
         position: absolute;
         justify-content: space-evenly;
@@ -213,6 +214,24 @@
     }
 
     /*		navbar end		*/
+    .descriptionBox {
+        background-color: beige;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    h3 {
+        padding: 10px;
+        color: rgb(61, 61, 61);
+    }
 </style>
 
 <body>
@@ -224,18 +243,27 @@
             <a href="../index.html#about-us">About</a>
         </div>
     </div>
-
+    <div class="descriptionBox">
+        <img src="../images/post.png" alt="">
+        <h1>Post-Classical History</h1>
+        <h3>500 AD - 1500 AD</h3>
+        <p>Post-classical paintings often reflect the cultural and religious shifts of their time. For example, during the
+        Byzantine era, art was heavily influenced by Christianity, leading to iconic mosaics and religious imagery. Later, in
+        the Islamic world, intricate geometric patterns and calligraphy became prominent in artistic expression. In East Asia,
+        post-classical art saw the flourishing of landscape paintings and calligraphy, particularly in China and Japan.</p>
+        <div class="next-button" onclick="Next('#artwork-1')">Next <i class="fa-solid fa-down-long"></i></div>
+    </div>
     <div class="paintings-container" id="paintingsContainer" style="padding-top:20px;"></div>
 
     <script>
         // Array of artworks using the same image for background and main display
         const artworks = [
-            { id: "artwork-1", title: "The Crucifixion", location: "Basilica di San Domenico, Arezzo, Italy", description: "Painted in the late 13th century by Cimabue, this work bridges the Byzantine and Gothic styles. It shows Christ on the cross, with elongated figures and a sorrowful atmosphere, hinting at the emotional depth that Giotto would later develop further.", imgSrc: "https://www.wga.hu/art/c/cimabue/assisi/crucifix.jpg", nextId: "#artwork-2" }, 
+            { id: "artwork-1", title: "The Crucifixion", location: "Basilica di San Domenico, Arezzo, Italy", description: "Painted in the late 13th century by Cimabue, this work bridges the Byzantine and Gothic styles. It shows Christ on the cross, with elongated figures and a sorrowful atmosphere, hinting at the emotional depth that Giotto would later develop further.", imgSrc: "https://www.wga.hu/art/c/cimabue/assisi/crucifix.jpg", nextId: "#artwork-2" },
             { id: "artwork-2", title: "The Last Judgment", location: "Sistine Chapel, Vatican City", description: " Painted by Michelangelo between 1536 and 1541, this masterpiece covers the altar wall of the Sistine Chapel. It depicts the Second Coming of Christ and the final judgment of souls, emphasizing dramatic motion and emotion. The work marks a transition from the High Renaissance to Mannerism with its bold composition and dynamic figures.", imgSrc: "https://cdn.britannica.com/99/240499-138-F5C95B84/Michelangelo-The-Last-Judgment.jpg?w=800&h=450&c=crop", nextId: "#artwork-3" },
-             { id: "artwork-3", title: "Maestà", location: "Museo dell'Opera del Duomo, Siena, Italy", description: " Completed in 1311, this altarpiece is a stunning example of early Italian Gothic art. It depicts the Virgin Mary enthroned with Christ, surrounded by saints and angels, emphasizing a spiritual, heavenly presence with delicate gold backgrounds.", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Duccio_maesta1021.jpg/1200px-Duccio_maesta1021.jpg", nextId: "#artwork-4" }, { id: "artwork-4", title: "Annunciation", location: "Uffizi Gallery, Florence, Italy", description: "Painted by Simone Martini and Lippo Memmi in 1333, this Gothic masterpiece portrays the Archangel Gabriel announcing to Mary that she will bear the Son of God. The painting features intricate gold details and stylized figures, reflecting the International Gothic style.", imgSrc: "https://cdn.britannica.com/94/5594-050-1C1166D6/Annunciation-Fra-Angelico-Florence-Museum-of-San.jpg", nextId: "#artwork-5" }, 
-             { id: "artwork-5", title: "The Wilton Diptych", location: "National Gallery, London, England", description: "Created around 1395–1399, this portable diptych is a prime example of late Gothic art. It shows King Richard II kneeling before the Virgin Mary and Christ, surrounded by angels. The intricate gold leaf and delicate figures reflect the craftsmanship of English and French Gothic painting.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTGa74vQ_9BJFMXz75ZxQ8l-SCNk67XSbtfw&s", nextId: "#artwork-6" }, 
-             { id: "artwork-6", title: "Christ in Majesty", location: "Museu Nacional d'Art de Catalunya, Barcelona, Spain", description: "This Romanesque fresco from the early 12th century depicts Christ enthroned in a mandorla, surrounded by symbols of the Four Evangelists. Its flat, stylized forms and bold colors emphasize spiritual authority and divine presence. The work is a significant example of early medieval art, showcasing the transition from Byzantine to Romanesque styles.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5TVxdAuE202KUpOzWBO2LMiu01Pj9HYQ5qw&s", nextId: "#artwork-7" }, 
-             { id: "artwork-7", title: "The Ghent Altarpiece", location: "St. Bavo’s Cathedral, Ghent, Belgium", description: "Painted by Jan van Eyck and his brother Hubert in 1432, this monumental polyptych is a masterpiece of early Northern Renaissance art. Its intricate realism, vibrant colors, and theological complexity represent the transition from Gothic to Renaissance.", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lamgods_open.jpg/1200px-Lamgods_open.jpg", nextId: "#" },];
+            { id: "artwork-3", title: "Maestà", location: "Museo dell'Opera del Duomo, Siena, Italy", description: " Completed in 1311, this altarpiece is a stunning example of early Italian Gothic art. It depicts the Virgin Mary enthroned with Christ, surrounded by saints and angels, emphasizing a spiritual, heavenly presence with delicate gold backgrounds.", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Duccio_maesta1021.jpg/1200px-Duccio_maesta1021.jpg", nextId: "#artwork-4" }, { id: "artwork-4", title: "Annunciation", location: "Uffizi Gallery, Florence, Italy", description: "Painted by Simone Martini and Lippo Memmi in 1333, this Gothic masterpiece portrays the Archangel Gabriel announcing to Mary that she will bear the Son of God. The painting features intricate gold details and stylized figures, reflecting the International Gothic style.", imgSrc: "https://cdn.britannica.com/94/5594-050-1C1166D6/Annunciation-Fra-Angelico-Florence-Museum-of-San.jpg", nextId: "#artwork-5" },
+            { id: "artwork-5", title: "The Wilton Diptych", location: "National Gallery, London, England", description: "Created around 1395–1399, this portable diptych is a prime example of late Gothic art. It shows King Richard II kneeling before the Virgin Mary and Christ, surrounded by angels. The intricate gold leaf and delicate figures reflect the craftsmanship of English and French Gothic painting.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTGa74vQ_9BJFMXz75ZxQ8l-SCNk67XSbtfw&s", nextId: "#artwork-6" },
+            { id: "artwork-6", title: "Christ in Majesty", location: "Museu Nacional d'Art de Catalunya, Barcelona, Spain", description: "This Romanesque fresco from the early 12th century depicts Christ enthroned in a mandorla, surrounded by symbols of the Four Evangelists. Its flat, stylized forms and bold colors emphasize spiritual authority and divine presence. The work is a significant example of early medieval art, showcasing the transition from Byzantine to Romanesque styles.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5TVxdAuE202KUpOzWBO2LMiu01Pj9HYQ5qw&s", nextId: "#artwork-7" },
+            { id: "artwork-7", title: "The Ghent Altarpiece", location: "St. Bavo’s Cathedral, Ghent, Belgium", description: "Painted by Jan van Eyck and his brother Hubert in 1432, this monumental polyptych is a masterpiece of early Northern Renaissance art. Its intricate realism, vibrant colors, and theological complexity represent the transition from Gothic to Renaissance.", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lamgods_open.jpg/1200px-Lamgods_open.jpg", nextId: "#" },];
         // Function to generate paintings dynamically
         function generatePaintings() {
             const container = document.getElementById("paintingsContainer");

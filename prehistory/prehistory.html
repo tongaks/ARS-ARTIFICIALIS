@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>PreHistory Arts</title>
 </head>
 
@@ -214,6 +215,25 @@
     }
 
     /*		navbar end		*/
+
+    .descriptionBox {
+        background-color: beige;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    h3 {
+        padding: 10px;
+        color: rgb(61, 61, 61);
+    }
 </style>
 
 <body>
@@ -225,9 +245,18 @@
             <a href="../index.html#about-us">About</a>
         </div>
     </div>
+    <div class="descriptionBox">
+        <img src="../images/preHistory/prehistory_header-removebg-preview.png" alt="">
+        <h1>Pre-History</h1>
+        <h3>40,000 BC-10,000 BC</h3>
+        <p>Prehistoric paintings are ancient artworks created by early humans, often found in caves and rock shelters. These
+        paintings, dating back thousands of years, depict scenes of daily life, animals, and abstract symbols, showcasing the
+        creative expression and cultural significance of early civilizations. They serve as a fascinating glimpse into the
+        origins of human artistry and communication.</p>
+        <div class="next-button" onclick="Next('#artwork-1')">Next <i class="fa-solid fa-down-long"></i></div>
+    </div>
 
     <div class="paintings-container" id="paintingsContainer" style="padding-top:20px;"></div>
-
     <script>
         // Array of artworks using the same image for background and main display
         const artworks = [
