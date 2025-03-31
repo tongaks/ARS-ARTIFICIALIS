@@ -68,32 +68,33 @@
     }
 
     .next-button {
-    user-select: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    margin: 10px 0px 0px 0px;
-    color: white;
-    width: fit-content;
-    background-color: #111;
-    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
-    text-align: center;
-}
+        user-select: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin: 10px 0px 0px 0px;
+        color: white;
+        width: fit-content;
+        background-color: #111;
+        transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+        text-align: center;
+    }
 
-/* Hover Effect */
-.next-button:hover {
-    background-color: #333;
-    transform: scale(1.05);
-}
+    /* Hover Effect */
+    .next-button:hover {
+        background-color: #333;
+        transform: scale(1.05);
+    }
 
-/* Click Effect */
-.next-button:active {
-    transform: scale(0.95);
-}
+    /* Click Effect */
+    .next-button:active {
+        transform: scale(0.95);
+    }
 
-.next-button {
-    animation: softPulse 2s infinite ease-in-out;
-}
-  .next-button {
+    .next-button {
+        animation: softPulse 2s infinite ease-in-out;
+    }
+
+    .next-button {
         user-select: none;
         cursor: pointer;
         padding: 10px 20px;
@@ -151,11 +152,12 @@
         width: 100vw;
         color: black;
         background-color: beige;
-       
+
         display: flex;
         position: absolute;
         justify-content: space-evenly;
         z-index: 1;
+        border: 2px solid rgb(31, 18, 0);
     }
 
     .navbar .control-links {
@@ -169,7 +171,8 @@
 
     li {
         list-style-type: none;
-         font-size: 30px; /*
+        font-size: 30px;
+        /*
         margin: 0;
      
         padding-left: 0;
@@ -200,9 +203,12 @@
         font-size: 50px;
         text-align: left;
     }
-    li, p {
+
+    li,
+    p {
         font-family: sans-serif;
     }
+
     p {
         font-size: 20px;
     }
@@ -298,8 +304,8 @@
                 container.innerHTML += `
                     <div id="${artwork.id}" class="painting" style="background-image: url('${artwork.imgSrc}'); background-size: cover; background-position: center;">
                         <div id="cover"></div>
-                        <img src="${artwork.imgSrc}">
-                        <div class="description">
+                        <img src="${artwork.imgSrc}" style="border: 2px solid rgb(31, 18, 0); border-radius:20px;">
+                        <div class="description" style="border: 2px solid rgb(31, 18, 0);">
                             <h1>${artwork.title}</h1>
                             <br/> 
                             <ul ><li>${artwork.location}</li></ul><br/> <hr />

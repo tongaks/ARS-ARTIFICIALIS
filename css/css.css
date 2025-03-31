@@ -42,6 +42,7 @@ body {
 	position: absolute;
 	justify-content: space-evenly;
 	z-index: 1;
+	border: 2px solid rgb(31, 18, 0);
 }
 
 .navbar .control-links {
@@ -154,6 +155,7 @@ body {
 	text-align: center;
 	/*	background-color: rgba(0, 0, 0, .6);*/
 	background-color: beige;
+	border: 2px solid rgb(31, 18, 0);
 }
 
 .time-periods {
@@ -233,6 +235,7 @@ body {
 	height: auto;
 	position: relative;
 	/* background-color: lightgray; */
+	/* background-color: beige; */
 	color: white;
 	height: 80vh;
 	justify-content: center;
@@ -250,22 +253,25 @@ body {
 	align-items: center;
 	font-size: 11px;
 	color: black;
-/*	text-shadow: 2px 2px darkgrey;*/
+	/*	text-shadow: 2px 2px darkgrey;*/
 	margin-top: 20px;
 	gap: 10px;
-	background-color: beige;
+	/* background-color: beige; */
 	padding-left: 20px;
 	padding-right: 20px;
 
 }
 
 .card-container-a {
+	border: 2px solid rgb(31, 18, 0);
+	border-radius: 10px;
 	width: 33%;
-/*	border: solid black 5px;*/
+	/*	border: solid black 5px;*/
 	background-color: beige;
 	padding-left: 50px;
 	padding-right: 50px;
-
+	padding-bottom: 10px;
+	margin: 20px;
 }
 
 .name-card {

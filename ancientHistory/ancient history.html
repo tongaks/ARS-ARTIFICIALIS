@@ -68,32 +68,33 @@
     }
 
     .next-button {
-    user-select: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    margin: 10px 0px 0px 0px;
-    color: white;
-    width: fit-content;
-    background-color: #111;
-    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
-    text-align: center;
-}
+        user-select: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin: 10px 0px 0px 0px;
+        color: white;
+        width: fit-content;
+        background-color: #111;
+        transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+        text-align: center;
+    }
 
-/* Hover Effect */
-.next-button:hover {
-    background-color: #333;
-    transform: scale(1.05);
-}
+    /* Hover Effect */
+    .next-button:hover {
+        background-color: #333;
+        transform: scale(1.05);
+    }
 
-/* Click Effect */
-.next-button:active {
-    transform: scale(0.95);
-}
+    /* Click Effect */
+    .next-button:active {
+        transform: scale(0.95);
+    }
 
-.next-button {
-    animation: softPulse 2s infinite ease-in-out;
-}
-  .next-button {
+    .next-button {
+        animation: softPulse 2s infinite ease-in-out;
+    }
+
+    .next-button {
         user-select: none;
         cursor: pointer;
         padding: 10px 20px;
@@ -169,7 +170,8 @@
 
     li {
         list-style-type: none;
-         font-size: 30px; /*
+        font-size: 30px;
+        /*
         margin: 0;
      
         padding-left: 0;
@@ -200,9 +202,12 @@
         font-size: 50px;
         text-align: left;
     }
-    li, p {
+
+    li,
+    p {
         font-family: sans-serif;
     }
+
     p {
         font-size: 20px;
     }
@@ -275,11 +280,11 @@
             },
             {
                 "id": "artwork-7",
-                "title": "The Fayum Mummy Portraits",
-                "location": "Faiyum, Egypt",
-                "description": "1st–3rd century CE Greco-Roman paintings on mummies. Painted in encaustic wax, they show remarkable realism, blending Egyptian funerary traditions with Roman portraiture.",
-                "imgSrc": "../images/ancientHistory/mummy.jpg",
-                "nextId": "#artwork-8"
+                "title": "The Tomb of the Diver Fresco",
+                "location": "Paestum, Italy",
+                "description": "The Tomb of the Diver is a rare example of Greek fresco painting, discovered in a burial site near Paestum. The fresco, painted on the interior walls and ceiling of a limestone tomb, depicts a young man diving into water, symbolizing the transition from life to death. The walls also feature a symposium scene, showing men reclining on couches, drinking wine, and engaging in conversation. ",
+                "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/f/fd/PaestumTaucher.jpg",
+                "nextId": "#"
             },
         ]
 
@@ -291,8 +296,8 @@
                 container.innerHTML += `
                     <div id="${artwork.id}" class="painting" style="background-image: url('${artwork.imgSrc}'); background-size: cover; background-position: center;">
                         <div id="cover"></div>
-                        <img src="${artwork.imgSrc}">
-                        <div class="description">
+                        <img src="${artwork.imgSrc}" style="border: 2px solid rgb(31, 18, 0); border-radius:20px;">
+                        <div class="description" style="border: 2px solid rgb(31, 18, 0);">
                             <h1>${artwork.title}</h1>
                             <br/> 
                             <ul ><li>${artwork.location}</li></ul><br/> <hr />
