@@ -26,16 +26,18 @@
 
 
 	<div class="intro">
-		<h2 style="-webkit-text-stroke: 1px black; /* Outline */
-  color: white; /* Inside color */">Welcome to</h2>
-		<h1 style="-webkit-text-stroke: 1px black; /* Outline */
-  color: white; /* Inside color */">Ars Artificialis</h1>
+		<h2 class="title">Welcome to</h2>
+		<h1 class="title">Ars Artificialis</h1>
 		<div class="button" onclick="Link('#time-periods')">Start</div>
 	</div>
 
 
-
 	<div class="timeline" id="time-periods">
+		<div class="back-button-container">
+			<div class="button" id="back" onclick="Link('#')"><span style="color: Tomato;"><i
+						class="fa-solid fa-circle-up fa-"></i></span></div>
+		</div>
+
 		<h1>Select a Time Period</h>
 
 			<div class="time-periods">
@@ -59,67 +61,31 @@
 
 
 	<div class="about-us" id="about-us">
-		<div class="back-button-container">
-			<div class="button" id="back" onclick="Link('#')"><span style="color: Tomato;"><i
-						class="fa-solid fa-circle-up fa-"></i></span></div>
-		</div>
-
-		<h1 class="about-us-text" style="-webkit-text-stroke: 1px black; /* Outline */
-  color: white; /* Inside color */">WHAT IS ARS ARTIFICIALIS?</h1>
+		<h1 class="about-us-text title">WHAT IS ARS ARTIFICIALIS?</h1>
 
 		<div class="card-container">
-			<div class="card-container-a">
-				<h1 style="padding-top: 10px; padding-bottom: 20px;">GENERAL OBJECTIVES</h1>
-				<h2 style="padding-bottom: 30px; color: rgb(63, 63, 63);">
-					Ars Artificialis is an interactive art gallery website that provides an easy-to-navigate interface
+			<div class="text-card">
+				<h2>GENERAL OBJECTIVES</h2>
+				<p> Ars Artificialis is an interactive art gallery website that provides an easy-to-navigate interface
 					for users to browse and see various works of art. The goal is to showcase famous works of art that
 					were made throughout different periods in history, and serve as an educational resource for those
 					wanting to know more about the history of art.
-				</h2>
+				</p>
 			</div>
 
-			<div class="card-container-a">
-				<h1 style="padding-top: 10px; padding-bottom: 20px;">SCOPE</h1>
-				<h2 style="padding-bottom: 10px;  color: rgb(63, 63, 63);">
-					Ars Artificialis is a digital version of a typical art gallery showcase. It will include categorized
+			<div class="text-card">
+				<h2>SCOPE</h2>
+				<p> Ars Artificialis is a digital version of a typical art gallery showcase. It will include categorized
 					art sections corresponding to the genre of the art piece, as well as the time period of its
 					creation. Each art piece will have a corresponding image and a brief overview and its history. The
 					website will be fully responsive, ensuring accessibility on both desktop and mobile devices.
-				</h2>
+				</p>
 			</div>
-
-		</div>
-
-		<div class="card-container">
-
 		</div>
 
 	</div>
-
-	</div>
-
-	</div>
-	<div class="card-container" style="bottom:0;background-color: beige;padding:15px;width: 97.1vw;">
-		<!-- <div></div>
-			<div class="card-container-item">
-				<div class="name-card">
-					<h2>Mark Shelo A. Denina</h2>
-				</div>
-
-				<div class="name-card">
-					<h2>Wion M. Quintela</h2>
-				</div>
-
-				<div class="name-card">
-					<h2>Andrei I. Zantua</h2>
-				</div>
-
-				<div class="name-card">
-					<h2>Jamin M. Villareal</h2>
-				</div> -->
-		<h1>ARS ARTIFICIALIS @ 2025</h1>
-
 </body>
+
 <script type="text/javascript">
 	function Link(path) {
 		window.location.href = path;
