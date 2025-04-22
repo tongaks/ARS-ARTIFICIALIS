@@ -263,12 +263,51 @@
     <script>
         // Array of artworks using the same image for background and main display
         const artworks = [
-            { id: "artwork-1", title: "The Crucifixion", location: "Basilica di San Domenico, Arezzo, Italy", description: "Painted in the late 13th century by Cimabue, this work bridges the Byzantine and Gothic styles. It shows Christ on the cross, with elongated figures and a sorrowful atmosphere, hinting at the emotional depth that Giotto would later develop further.", imgSrc: "https://www.wga.hu/art/c/cimabue/assisi/crucifix.jpg", nextId: "#artwork-2" },
-            { id: "artwork-2", title: "The Last Judgment", location: "Sistine Chapel, Vatican City", description: " Painted by Michelangelo between 1536 and 1541, this masterpiece covers the altar wall of the Sistine Chapel. It depicts the Second Coming of Christ and the final judgment of souls, emphasizing dramatic motion and emotion. The work marks a transition from the High Renaissance to Mannerism with its bold composition and dynamic figures.", imgSrc: "https://cdn.britannica.com/99/240499-138-F5C95B84/Michelangelo-The-Last-Judgment.jpg?w=800&h=450&c=crop", nextId: "#artwork-3" },
-            { id: "artwork-3", title: "Maestà", location: "Museo dell'Opera del Duomo, Siena, Italy", description: " Completed in 1311, this altarpiece is a stunning example of early Italian Gothic art. It depicts the Virgin Mary enthroned with Christ, surrounded by saints and angels, emphasizing a spiritual, heavenly presence with delicate gold backgrounds.", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Duccio_maesta1021.jpg/1200px-Duccio_maesta1021.jpg", nextId: "#artwork-4" }, { id: "artwork-4", title: "Annunciation", location: "Uffizi Gallery, Florence, Italy", description: "Painted by Simone Martini and Lippo Memmi in 1333, this Gothic masterpiece portrays the Archangel Gabriel announcing to Mary that she will bear the Son of God. The painting features intricate gold details and stylized figures, reflecting the International Gothic style.", imgSrc: "https://cdn.britannica.com/94/5594-050-1C1166D6/Annunciation-Fra-Angelico-Florence-Museum-of-San.jpg", nextId: "#artwork-5" },
-            { id: "artwork-5", title: "The Wilton Diptych", location: "National Gallery, London, England", description: "Created around 1395–1399, this portable diptych is a prime example of late Gothic art. It shows King Richard II kneeling before the Virgin Mary and Christ, surrounded by angels. The intricate gold leaf and delicate figures reflect the craftsmanship of English and French Gothic painting.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTGa74vQ_9BJFMXz75ZxQ8l-SCNk67XSbtfw&s", nextId: "#artwork-6" },
-            { id: "artwork-6", title: "Christ in Majesty", location: "Museu Nacional d'Art de Catalunya, Barcelona, Spain", description: "This Romanesque fresco from the early 12th century depicts Christ enthroned in a mandorla, surrounded by symbols of the Four Evangelists. Its flat, stylized forms and bold colors emphasize spiritual authority and divine presence. The work is a significant example of early medieval art, showcasing the transition from Byzantine to Romanesque styles.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5TVxdAuE202KUpOzWBO2LMiu01Pj9HYQ5qw&s", nextId: "#artwork-7" },
-            { id: "artwork-7", title: "The Ghent Altarpiece", location: "St. Bavo’s Cathedral, Ghent, Belgium", description: "Painted by Jan van Eyck and his brother Hubert in 1432, this monumental polyptych is a masterpiece of early Northern Renaissance art. Its intricate realism, vibrant colors, and theological complexity represent the transition from Gothic to Renaissance.", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lamgods_open.jpg/1200px-Lamgods_open.jpg", nextId: "#" },];
+            {
+                id: "artwork-1",
+                title: "The Crucifixion",
+                location: "Basilica di San Domenico, Arezzo, Italy",
+                description: "Painted in the late 13th century by Cimabue, this work bridges the Byzantine and Gothic styles. It shows Christ on the cross, with elongated figures and a sorrowful atmosphere, hinting at the emotional depth that Giotto would later develop further.",
+                imgSrc: "https://www.wga.hu/art/c/cimabue/assisi/crucifix.jpg",
+                link: "https://www.fatherkenny.com/en/blog/assisi",
+                nextId: "#artwork-2"
+            },
+            {
+                id: "artwork-2",
+                title: "The Last Judgment",
+                location: "Sistine Chapel, Vatican City",
+                description: "Painted by Michelangelo between 1536 and 1541, this masterpiece covers the altar wall of the Sistine Chapel. It depicts the Second Coming of Christ and the final judgment of souls, emphasizing dramatic motion and emotion. The work marks a transition from the High Renaissance to Mannerism with its bold composition and dynamic figures.",
+                imgSrc: "https://cdn.britannica.com/99/240499-138-F5C95B84/Michelangelo-The-Last-Judgment.jpg?w=800&h=450&c=crop",
+                link: "https://en.wikipedia.org/wiki/The_Last_Judgment_(Michelangelo)",
+                nextId: "#artwork-3"
+            },
+            {
+                id: "artwork-3",
+                title: "Maestà",
+                location: "Museo dell'Opera del Duomo, Siena, Italy",
+                description: "Completed in 1311, this altarpiece is a stunning example of early Italian Gothic art. It depicts the Virgin Mary enthroned with Christ, surrounded by saints and angels, emphasizing a spiritual, heavenly presence with delicate gold backgrounds.",
+                imgSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Duccio_maesta1021.jpg/1200px-Duccio_maesta1021.jpg",
+                link: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fnrm.wikipedia.org%2Fwiki%2FPage_d%C3%A9_garde",
+                nextId: "#artwork-4"
+            },
+            {
+                id: "artwork-4",
+                title: "Annunciation",
+                location: "Uffizi Gallery, Florence, Italy",
+                description: "Painted by Simone Martini and Lippo Memmi in 1333, this Gothic masterpiece portrays the Archangel Gabriel announcing to Mary that she will bear the Son of God. The painting features intricate gold details and stylized figures, reflecting the International Gothic style.",
+                imgSrc: "https://cdn.britannica.com/94/5594-050-1C1166D6/Annunciation-Fra-Angelico-Florence-Museum-of-San.jpg",
+                link: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffineartamerica.com%2Fart%2Fpaintings%2Ffra%2Bangelico",
+                nextId: "#artwork-5"
+            },
+            {
+                id: "artwork-5",
+                title: "The Triumph of Venice",
+                location: "National Gallery, London, England",
+                description: "Created around 1395–1399, this portable diptych is a prime example of late Gothic art. It shows King Richard II kneeling before the Virgin Mary and Christ, surrounded by angels. The intricate gold leaf and delicate figures reflect the craftsmanship of English and French Gothic painting.",
+                imgSrc: "https://ncartmuseum.org/wp-content/uploads/2021/03/60_17_60.jpg",
+                link: "https://ncartmuseum.org/object/the-triumph-of-venice/",
+                nextId: "#artwork-6"
+            },];
         // Function to generate paintings dynamically
         function generatePaintings() {
             const container = document.getElementById("paintingsContainer");
@@ -281,9 +320,9 @@
                         <div class="description" style="border: 2px solid rgb(31, 18, 0);">
                             <h1>${artwork.title}</h1>
                             <br/> 
-                            <ul ><li>${artwork.location}</li></ul><br/> <hr />
+                            <ul ><li><i class="fa-solid fa-globe"></i> ${artwork.location}</li></ul><br/> <hr />
                             <br/>
-                            <p style="padding-bottom:20px;">${artwork.description}</p> <br/>
+                            <p style="padding-bottom:20px;">${artwork.description} <a id="link" href="${artwork.link}" target="_blank"><i class="color: Dodgerblue; fa-solid fa-arrow-up-right-from-square"></i></a></p><br/>
                             <div class="next-button" onclick="Next('${artwork.nextId}')">Next</div>
                             <br/>
                         </div>

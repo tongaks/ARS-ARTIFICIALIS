@@ -189,6 +189,8 @@
         text-decoration: none;
     }
 
+
+
     .control-links a:hover {
         border-bottom: 1px solid black;
         text-decoration: none;
@@ -269,6 +271,7 @@
                 "location": "Luxor, Egypt",
                 "description": "An Egyptian papyrus scroll (~1275 BCE) depicting Anubis weighing a heart against the Feather of Ma’at. Osiris awaits in the afterlife, illustrating key Egyptian beliefs on judgment.",
                 "imgSrc": "../images/ancientHistory/hunefer.jpg",
+                "link": "https://en.wikipedia.org/wiki/Hunefer",
                 "nextId": "#artwork-2"
             },
             {
@@ -277,6 +280,7 @@
                 "location": "Knossos, Crete, Greece",
                 "description": "A 1500 BCE fresco showing an acrobat leaping over a bull, possibly a ritual or sport. Known for vibrant colors and dynamic movement, a hallmark of Minoan artistry.",
                 "imgSrc": "../images/ancientHistory/frescoleap.jpg",
+                "link": "https://en.wikipedia.org/wiki/Bull-Leaping_Fresco",
                 "nextId": "#artwork-3"
             },
             {
@@ -285,6 +289,7 @@
                 "location": "Amarna, Egypt",
                 "description": "A 1350 BCE relief of Pharaoh Akhenaten and Queen Nefertiti under Aten’s rays. Represents Egypt’s brief transition to monotheism, with a unique, naturalistic art style.",
                 "imgSrc": "../images/ancientHistory/nefertiti.jpg",
+                "link": "https://pt.m.wikipedia.org/wiki/Ficheiro:HouseAltar-AkhenatenNefertitiAndThreeOfTheirDaughters.png",
                 "nextId": "#artwork-4"
             },
             {
@@ -293,6 +298,7 @@
                 "location": "Pompeii, Italy",
                 "description": "A Roman mosaic (~100 BCE) based on a lost Greek painting, depicting Alexander the Great’s victory over Darius III. Shows impressive shading and dynamic composition.",
                 "imgSrc": "../images/ancientHistory/alexander.jpg",
+                "link": "https://en.wikipedia.org/wiki/Alexander_Mosaic",
                 "nextId": "#artwork-5"
             },
             {
@@ -301,6 +307,7 @@
                 "location": "Livia’s Villa, Rome, Italy",
                 "description": "A 1st-century BCE Roman fresco depicting a lush, illusionistic garden with detailed flora and birds. A masterpiece of Roman wall painting, reflecting a love for nature.",
                 "imgSrc": "../images/ancientHistory/garden.jpg",
+                "link": "https://www.milestonerome.com/2018/04/the-painted-garden-from-the-villa-of-livia-for-naturemw/",
                 "nextId": "#artwork-6"
             },
             {
@@ -309,6 +316,7 @@
                 "location": "Pompeii, Italy",
                 "description": "A 1st-century BCE fresco depicting mysterious initiation rites, possibly of Dionysus. Features deep red backgrounds and lifelike figures, well-preserved by volcanic ash.",
                 "imgSrc": "../images/ancientHistory/villa.jpg",
+                "link": "https://pompeiisites.org/en/comunicati/the-villa-of-the-mysteries-reopens-on-the-19th-july/",
                 "nextId": "#artwork-7"
             },
             {
@@ -317,6 +325,7 @@
                 "location": "Paestum, Italy",
                 "description": "The Tomb of the Diver is a rare example of Greek fresco painting, discovered in a burial site near Paestum. The fresco, painted on the interior walls and ceiling of a limestone tomb, depicts a young man diving into water, symbolizing the transition from life to death. The walls also feature a symposium scene, showing men reclining on couches, drinking wine, and engaging in conversation. ",
                 "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/f/fd/PaestumTaucher.jpg",
+                "link": "https://en.wikipedia.org/wiki/Tomb_of_the_Diver",
                 "nextId": "#"
             },
         ]
@@ -333,9 +342,10 @@
                         <div class="description" style="border: 2px solid rgb(31, 18, 0);">
                             <h1>${artwork.title}</h1>
                             <br/> 
-                            <ul ><li>${artwork.location}</li></ul><br/> <hr />
+                            <ul ><li><i class="fa-solid fa-globe"></i> ${artwork.location}</li></ul><br/> <hr />
+
                             <br/>
-                            <p style="padding-bottom:20px;">${artwork.description}</p> <br/>
+                            <p style="padding-bottom:20px;">${artwork.description} <a id="link" href="${artwork.link}" target="_blank"><i class="color: Dodgerblue; fa-solid fa-arrow-up-right-from-square"></i></a></p> <br/>
                             <div class="next-button" onclick="Next('${artwork.nextId}')">Next</div>
                             <br/>
                         </div>

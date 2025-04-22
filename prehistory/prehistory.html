@@ -247,13 +247,16 @@
     </div>
     <div class="descriptionBox">
         <img src="../images/preHistory/prehistory_header-removebg-preview.png" alt="">
-        <h1  style="-webkit-text-stroke: 1px black; /* Outline */
+        <h1 style="-webkit-text-stroke: 1px black; /* Outline */
   color: white; /* Inside color */text-shadow: 2px 2px black;">Pre-History</h1>
         <h3>40,000 BC-10,000 BC</h3>
-        <p>Prehistoric paintings are ancient artworks created by early humans, often found in caves and rock shelters. These
-        paintings, dating back thousands of years, depict scenes of daily life, animals, and abstract symbols, showcasing the
-        creative expression and cultural significance of early civilizations. They serve as a fascinating glimpse into the
-        origins of human artistry and communication.</p>
+        <p>Prehistoric paintings are ancient artworks created by early humans, often found in caves and rock shelters.
+            These
+            paintings, dating back thousands of years, depict scenes of daily life, animals, and abstract symbols,
+            showcasing the
+            creative expression and cultural significance of early civilizations. They serve as a fascinating glimpse
+            into the
+            origins of human artistry and communication.</p>
         <div class="next-button" onclick="Next('#artwork-1')">Next <i class="fa-solid fa-down-long"></i></div>
     </div>
 
@@ -267,6 +270,7 @@
                 location: "Altamira Cave, Spain",
                 description: "The Altamira cave paintings are among the first discovered and recognized as prehistoric art. The ceiling features detailed, polychrome bison painted with red, black, and yellow pigments.",
                 imgSrc: "../images/preHistory/Altamira-Bison-By-Rameessos-1024x831.jpg",
+                "link": "https://en.wikipedia.org/wiki/Cave_of_Altamira",
                 nextId: "#artwork-2"
             },
             {
@@ -275,6 +279,7 @@
                 location: "Lascaux Cave, France",
                 description: "One of the most famous prehistoric paintings, this grand composition features large bulls, horses, and deer, some measuring up to 5 meters. The overlapping images suggest movement and an attempt at perspective.",
                 imgSrc: "../images/preHistory/hallofthebulls.jpg",
+                "link": "https://en.wikipedia.org/wiki/Lascaux",
                 nextId: "#artwork-3"
             },
             {
@@ -283,6 +288,7 @@
                 location: "Chauvet Cave, France",
                 description: "This panel shows a group of lions in various stages of movement, possibly hunting. The shading and detail indicate a deep understanding of animal behavior. Chauvet’s paintings are some of the oldest known, yet they exhibit advanced artistic techniques.",
                 imgSrc: "../images/preHistory/lions.jpg",
+                "link": "https://acercatealapintura.com/2021/07/04/the-panel-of-the-lions/",
                 nextId: "#artwork-4"
             },
             {
@@ -291,6 +297,7 @@
                 location: "Pech Merle Cave, France",
                 description: "This artwork features horses covered in black spots and surrounded by hand stencils. Some researchers believe the spots represent real horse markings, showing early observation skills. Others suggest a symbolic or spiritual meaning.",
                 imgSrc: "../images/preHistory/horseandhands.webp",
+                "link": "https://evaallanarts.substack.com/p/the-horses-and-hands-at-pech-merle",
                 nextId: "#artwork-5"
             },
             {
@@ -299,6 +306,7 @@
                 location: "Utah, USA",
                 description: "This artwork features horses covered in black spots and surrounded by hand stencils. Some researchers believe the spots represent real horse markings, showing early observation skills. Others suggest a symbolic or spiritual meaning.",
                 imgSrc: "../images/preHistory/greatgallery.webp",
+                "link": "https://www.roadtripryan.com/go/t/utah/robbers-roost/the-great-gallery-horseshoe-canyon",
                 nextId: "#artwork-6"
             },
             {
@@ -307,6 +315,7 @@
                 location: "Vidin Province, Bulgaria",
                 description: "This artwork features horses covered in black spots and surrounded by hand stencils. Some researchers believe the spots represent real horse markings, showing early observation skills. Others suggest a symbolic or spiritual meaning.",
                 imgSrc: "../images/preHistory/magura.jpg",
+                "link": "https://en.wikipedia.org/wiki/Magura_Cave",
                 nextId: "#artwork-7"
             },
             {
@@ -315,6 +324,7 @@
                 location: "Madhya Pradesh, India",
                 description: "Contains hunting scenes, dancing figures, and animals, dating back 30,000 BCE. Art style evolved over thousands of years. Showcases early human life and beliefs.",
                 imgSrc: "../images/preHistory/bhimbetka.jpg",
+                "link": "https://en.wikipedia.org/wiki/Bhimbetka_rock_shelters",
                 nextId: "#artwork-8"
             }, {
                 id: "artwork-8",
@@ -322,6 +332,7 @@
                 location: "Bashkortostan, Russia",
                 description: "Features red ochre images of mammoths and horses, created ~16,000 BCE. Located in a hard-to-reach limestone cavern. Likely had ceremonial or mythological importance.",
                 imgSrc: "../images/preHistory/kapova.jpg",
+                "link": "https://www.donsmaps.com/kapova.html",
                 nextId: "#"
             },
         ];
@@ -338,9 +349,9 @@
                         <div class="description" style="border: 2px solid rgb(31, 18, 0);">
                             <h1>${artwork.title}</h1>
                             <br/> 
-                            <ul ><li>${artwork.location}</li></ul><br/> <hr />
+                            <ul ><li><i class="fa-solid fa-globe"></i> ${artwork.location}</li></ul><br/> <hr />
                             <br/>
-                            <p style="padding-bottom:20px;">${artwork.description}</p> <br/>
+                            <p style="padding-bottom:20px;">${artwork.description} <a id="link" href="${artwork.link}" target="_blank"><i class="color: Dodgerblue; fa-solid fa-arrow-up-right-from-square"></i></a></p> <br/>
                             <div class="next-button" onclick="Next('${artwork.nextId}')">Next</div>
                             <br/>
                         </div>
@@ -348,7 +359,6 @@
                 `;
             });
         }
-
         function Next(path) {
             window.location.href = path;
         }
