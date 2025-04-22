@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Documents/WEB SYSTEM"
+		},
+		{
+			"name": "ARS-ARTIFICIALIS",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "WEB SYSTEM"
+	}
+}
