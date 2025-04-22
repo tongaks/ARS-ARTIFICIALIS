@@ -3,12 +3,21 @@
 	src: url("./bold.ttf");
 }
 
+@font-face {
+	font-family: fon;
+	src: url("./font.ttf");
+}
+
 
 * {
 	padding: 0;
 	margin: 0;
 	text-decoration: none;
 	user-select: none;
+}
+
+.r {
+	font-family: fon;
 }
 
 html {
@@ -160,7 +169,6 @@ body {
 	font-family: font;
 }
 
-.r,
 .role {
 	font-family: font;
 }
