@@ -36,7 +36,7 @@ body {
 /*		navbar start	*/
 .navbar {
 	padding: 10px 0px;
-/*	width: 100vw;*/
+	/*	width: 100vw;*/
 	width: 100%;
 	color: black;
 	background-color: beige;
@@ -266,8 +266,19 @@ body {
 
 
 .text-card p {
-	font-size: 1.1rem;	
+	font-size: 1.1rem;
 	color: rgb(63, 63, 63);
+}
+
+.devsPage {
+	color: black;
+
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	/*	background-color: rgba(0, 0, 0, .6);*/
+	background-color: beige;
+	border: 2px solid rgb(31, 18, 0);
 }
 
 /*	about us end	*/
@@ -304,6 +315,7 @@ body {
 		left: 85vw;
 		padding: auto;
 	}
+
 
 	/* .name-card {
 		font-size: 1rem;
