@@ -160,6 +160,11 @@ body {
 	font-family: font;
 }
 
+.r,
+.role {
+	font-family: font;
+}
+
 .maintitle {
 	color: white;
 }
