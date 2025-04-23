@@ -63,6 +63,16 @@ body {
 	border: 2px solid rgb(31, 18, 0);
 }
 
+.logo {
+	display: flex;
+}
+
+.logo img {
+	width: auto;
+	height: 30px;
+	padding-right: 3px;
+}
+
 .navbar .control-links {
 	display: flex;
 	align-items: center;
@@ -99,6 +109,11 @@ body {
 
 .intro h1 {
 	font-size: 5em;
+}
+
+.intro img {
+	max-width: 50%;
+	height: auto;
 }
 
 /*		intro end		*/
